@@ -39,7 +39,7 @@ public class AuthController {
     }
 
     @PatchMapping("/verify-account")
-    @RateLimiter(name = "auth-rate-limiter")
+    @RateLimiter(name = "otp-rate-limiter")
     ResponseEntity<?> verifyAccount(@Valid @RequestBody VerifyAccountDto verifyAccountRequest){
         if(!otpService.verifyOtp(verifyAccountRequest.email(), verifyAccountRequest.otp(), OtpType.VERIFY_ACCOUNT))
             throw new BadRequestException("Invalid email or OTP");

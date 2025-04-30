@@ -13,12 +13,12 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @OpenAPIDefinition(
         info = @Info(
                 contact = @Contact(
-                        name = "Yves HAKIZIMANA",
-                        email = "yhakizimana@rca.ac.rw",
+                        name = "yr_names",
+                        email = "email@rca.ac.rw",
                         url = "https://rca.ac.rw"
                 ),
-                description = "OpenApi Documentation For EUCL Token Meter Generation.",
-                title = "OpenApi Specification - EUCL Token Meter Generation.",
+                description = "yr_description.",
+                title = ".......",
                 version = "1.0",
                 license = @License(
                         name = "Apache-License",

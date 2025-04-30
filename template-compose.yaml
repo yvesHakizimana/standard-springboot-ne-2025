@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  maildev:
+    container_name: eucl-mail-server
+    image: maildev/maildev
+    ports:
+      - "1080:1080"
+      - "1030:1025"
+    restart: unless-stopped
