@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Verification</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .otp-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            display: inline-block;
+        }
+        .footer { margin-top: 20px; font-size: 12px; color: #777; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="header">Verify your account</h1>
+    <p> Dear <span th:text="${name}">User</span></p>
+    <p>Thank you for creating an account with us <span th:text="${companyName}">Our Company!</span></p>
+    <p>To complete your registration, please use the following OTP : </p>
+    <div class="otp-code" th:text="${otp}">123456</div>
+    <p>The code is valid for <span th:text="${expirationTime}">10</span> minutes.</p>
+    <p><strong>Security Notice: </strong></p>
+    <ul>
+        <li>Never share this OTP with anyone</li>
+        <li>Our team will never ask for your OTP</li>
+        <li>The code will expire after <span th:text="${expirationTime}">10</span> minutes</li>
+    </ul>
+    <p>If you didn't request this verification, please ignore this email or contact our support team immediately.</p>
+    <div class="footer">
+        <p>Best regards,<br>
+            <span th:text="${companyName}">Our Company</span> Team</p>
+        <p>BNR Banking System.</p>
+    </div>
+</div>
+</body>
